@@ -1,0 +1,7 @@
+const shortResponse =() =>{
+    return(
+        <>
+            
+        </>
+    )
+}

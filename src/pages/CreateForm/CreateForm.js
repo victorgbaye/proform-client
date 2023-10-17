@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './CreateForm.css'; // Import your CSS file for styling
+import DefaultQuestion from './DefaultQuestion';
 
 const CreateForm = () => {
     const [questions, setQuestions] = useState([]);
@@ -10,6 +11,7 @@ const CreateForm = () => {
       id: questions.length + 1,
       text: 'Question',
       type: 'text', // You can have different question types like text, multiple choice, etc.
+      response: <DefaultQuestion/>
     };
     setQuestions([...questions, newQuestion]);
   };
@@ -35,15 +37,19 @@ const CreateForm = () => {
     {questions.map(question => (
       <div key={question.id} className="question">
         {editingQuestionId === question.id ? (
-          <input
-            type="text"
-            value={question.text}
-            onChange={e => handleQuestionChange(e, question.id)}
-            onBlur={stopEditingQuestion}
-            autoFocus
-          />
+            <>
+            <input
+                type="text"
+                value={question.text}
+                onChange={e => handleQuestionChange(e, question.id)}
+                onBlur={stopEditingQuestion}
+                autoFocus
+            />
+            <DefaultQuestion/>
+            </>
+          
         ) : (
-          <div onClick={() => startEditingQuestion(question.id)}>{question.text}</div>
+          <div onClick={() => startEditingQuestion(question.id)}>{question.text}  <DefaultQuestion/></div>
         )}
       </div>
     ))}

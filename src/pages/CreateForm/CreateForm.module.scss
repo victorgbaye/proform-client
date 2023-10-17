@@ -1,10 +1,15 @@
+.CreateFormWrapper{
+  margin: 0 auto;
+  width: 700px;
+
+}
 .CreateFormContainer{
     // width: 1020px;
     // border: 1px solid red;
-    margin: 0 auto;
+    
     margin-top: 20px;
     box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.10);
-    width: 700px;
+    // width: 700px;
     padding: 0 24px;
 }
 .NewFormHeaderContainer{
@@ -37,4 +42,26 @@
     background: none;
     /* Add other styles as needed */
   }
+}
+
+.NewQuestionAndResponse{
+  display: flex;
+  flex-direction: column;
+}
+.NewQuestionContainer{
+  display: flex;
+  align-items: flex-start;
+  // flex-direction: column;
+  justify-content: flex-start;
+  p{
+    // border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+}
+
+//cncndjdi
+.formType{
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }

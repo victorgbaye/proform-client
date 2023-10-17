@@ -1,0 +1,29 @@
+.InputContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.InputLabel{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #383838;
+    
+}
+input{
+    // max-width: 400px;
+    outline: none;
+    border-radius: 8px;
+    height: 44px;
+    // padding: 0 auto;
+    padding-left: 16px;
+    border: 1px solid #F2F2F2;
+    background: #F2F2F2;
+}
+input::placeholder {
+    // padding-left: 16px;
+    color: #A6A6A6; 
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+  }

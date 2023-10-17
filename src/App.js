@@ -5,6 +5,8 @@ import MyForms from './pages/MyForms/MyForms';
 import Support from './pages/Support/Support';
 import CreateForm from './pages/CreateForm/CreateForm';
 import CreateFormX from './pages/CreateForm/CreateFormX';
+import Login from './pages/Auth/Login/Login';
+import Signup from './pages/Auth/Signup/Signup';
 
 
 function App() {
@@ -18,6 +20,11 @@ function App() {
           <Route path="/helpandsupport" element={<Support />}/>
           <Route path="/createform" element={<CreateForm />}/>
           <Route path="/sample" element={<CreateFormX />}/>
+          <Route path="/sample" element={<CreateFormX />}/>  
+          <Route path="/login" element={<Login />}/>
+          <Route path="/signup" element={<Signup />}/>
+
+
 
         </Routes>
       </Router>
