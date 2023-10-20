@@ -40,7 +40,7 @@ const Signup = () => {
                 fontSize:'17px'
             }}
             >
-               Login
+               Signup
             </Button>
             <p style={{textAlign:'center', marginTop:'6px', fontSize:'12px'}}>Already have an account? <span style={{color:'#4040F2'}}>Login</span></p>
     </div>

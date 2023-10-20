@@ -13,7 +13,7 @@ export const Input = ({ type, placeholder, label, name, value, onChange, ...rest
     return(
 <div className={styles.InputContainer}>
       <label htmlFor={name} className={styles.InputLabel}>{label}</label>
-      <input
+      <input className={styles.input}
         autoComplete='false'
         type={type}
         placeholder={placeholder}

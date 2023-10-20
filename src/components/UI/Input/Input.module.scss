@@ -10,7 +10,7 @@
     color: #383838;
     
 }
-input{
+.input{
     // max-width: 400px;
     outline: none;
     border-radius: 8px;
@@ -20,7 +20,7 @@ input{
     border: 1px solid #F2F2F2;
     background: #F2F2F2;
 }
-input::placeholder {
+.input::placeholder {
     // padding-left: 16px;
     color: #A6A6A6; 
     font-size: 14px;

@@ -19,7 +19,19 @@
     color: #A8B0B9;
 }
 
-
+.formSearch{
+    display: flex;
+    align-items: center;
+    background: #EFEFEF;
+    padding: 7px 16px;
+    border-radius: 8px;
+    input{
+        border: none;
+        background: none;
+        outline: none;
+        width: 100%;
+    }
+}
 .ActionSection{
     display: flex;
     align-items: center;
