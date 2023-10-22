@@ -15,24 +15,24 @@ const DefaultQuestion = () => {
     
   return (
     <div>
-        {/* <p>hello</p>
+        <p>hello</p>
         <div className={styles.CreateFormContainer}>
             <section className={styles.NewQuestionContainer}>
                 <div className={styles.NewQuestionAndResponse}>
                     <input 
                     name="title" 
-                    value={formHeader.title} 
-                    onChange={handleTitleChange} 
+                    // value={formHeader.title} 
+                    // onChange={handleTitleChange} 
                     className={styles.NewFormTitle}/>
                     <input 
                     name="description" 
-                    value={formHeader.description} 
-                    onChange={handleTitleChange} 
+                    // value={formHeader.description} 
+                    // onChange={handleTitleChange} 
                     className={styles.NewFormDescription}/>
                 </div>
                 <DropdownInput label='Question Type' options={fieldType} style={{width:'222px',height:'4px', padding:'0px'}}/>
             </section>   
-        </div> */}
+        </div>
     </div>
   )
 }

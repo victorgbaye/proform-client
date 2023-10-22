@@ -11,7 +11,7 @@ const CreateForm = () => {
       id: questions.length + 1,
       text: 'Question',
       type: 'text', // You can have different question types like text, multiple choice, etc.
-      response: <DefaultQuestion/>
+    //   response: <DefaultQuestion/>
     };
     setQuestions([...questions, newQuestion]);
   };
