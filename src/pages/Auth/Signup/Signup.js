@@ -15,8 +15,14 @@ const Signup = () => {
         <main className={styles.loginForm}>
         <Input
             type='text'
-            label='Full name'
-            placeholder='jon Doe'
+            label='First name'
+            placeholder='Jon'
+
+            />
+            <Input
+            type='text'
+            label='Last name'
+            placeholder='Doe'
 
             />
             <Input

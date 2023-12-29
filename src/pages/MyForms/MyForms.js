@@ -5,9 +5,10 @@ import FeedOutlinedIcon from '@mui/icons-material/FeedOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 // import Table from '../../components/compound/Table/Table';
 import FormTable from './FormsTable';
+import PreviousButton from '../../components/compound/BackButton/BackButton';
 
 const MyForms = () => {
-    const [isEmpty, setIsEmpty] = useState(false)
+    const [isEmpty] = useState(false)
   return (
     <div>
         <main className={styles.MyFormContainer}>
@@ -16,7 +17,7 @@ const MyForms = () => {
 
                 <>
                     <div className={styles.emptyFormListHeader}>
-                        <p>My Forms(0)</p>
+                        <PreviousButton/><p>My Forms(0)</p>
                         <Button
                         style={{width:"200px", background:"#4040F2", color:"white", padding:"10px 24px",}}
                         >+  Create New Form
@@ -28,7 +29,10 @@ const MyForms = () => {
 
                 <>
                     <div className={styles.emptyFormListHeader}>
-                        <p>My Forms(12)</p>
+                        <span style={{display:'flex', gap:'8px', alignItems:'center'}}>
+                            <PreviousButton/>
+                            <p>My Forms(12)</p>
+                        </span>
 
                         <div className={styles.formSearch}>
                         <input

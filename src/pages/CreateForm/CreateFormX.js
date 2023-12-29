@@ -54,7 +54,6 @@ const handleQuestionChange = (e, questionId) => {
     <div className={styles.CreateFormWrapper}>
         <div className={styles.CreateFormContainer}>
             <header className={styles.NewFormHeaderContainer}>
-                {/* <p className={styles.NewFormTitle}>Untitled form</p> */}
                 <div>
                     <input 
                     name="title" 
@@ -77,7 +76,7 @@ const handleQuestionChange = (e, questionId) => {
                     
                     <div  key={question.id}>
                     <div className={styles.CreateFormContainer}>
-                        <section className={styles.NewQuestionContainer}>
+                        <section className={styles.NewQuestionContainer} style={{padding:'24px'}}>
                             {/* <p className={styles.NewFormTitle}>Untitled form</p> */}
                             <div className={styles.NewQuestionAndResponse}>
                                 <input 
@@ -86,7 +85,7 @@ const handleQuestionChange = (e, questionId) => {
                                 onChange={e => handleQuestionChange(e, question.id)}
                                 className={styles.NewFormTitle}/>
                                 <input 
-                                name="description" 
+                                name="description"
                                 value={formHeader.description} 
                                 onChange={e => handleQuestionChange(e, question.id)}
                                 className={styles.NewFormDescription}/>

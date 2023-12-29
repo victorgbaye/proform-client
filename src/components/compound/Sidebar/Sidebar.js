@@ -28,13 +28,16 @@ const Sidebar = () => {
                                     {SidebarItem.icon}
                             </div>
                             <div>{SidebarItem.title}</div>
+                        
                         </li>
 
                         </>
                     )
                 })
             }
+           
         </ul>
+        
     </div>
   )
 }

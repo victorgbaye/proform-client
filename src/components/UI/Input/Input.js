@@ -9,7 +9,7 @@ import InputLabel from '@mui/material/InputLabel';
 
 
 
-export const Input = ({ type, placeholder, label, name, value, onChange, ...rest }) =>{
+export const Input = ({ type, placeholder, readOnly, label, name, value, onChange, ...rest }) =>{
     return(
 <div className={styles.InputContainer}>
       <label htmlFor={name} className={styles.InputLabel}>{label}</label>
@@ -20,6 +20,7 @@ export const Input = ({ type, placeholder, label, name, value, onChange, ...rest
         name={name}
         value={value}
         onChange={onChange}
+        readOnly={readOnly}
         {...rest}
       />
     </div>

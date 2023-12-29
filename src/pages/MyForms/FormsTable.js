@@ -3,6 +3,7 @@ import React from 'react';
 import styles from "./MyForms.module.scss";
 import { formData } from './MyFormsData'
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
+import { Link } from 'react-router-dom';
 
 const FormTable = () => {
   return (
@@ -21,10 +22,12 @@ const FormTable = () => {
               <td>{formName}</td>
               <td>{lastUpdated.toDateString()}</td>
               <td>{totalResponses}</td>
-              <td className={styles.formTableRowSeeMore}>
-                <p>See More</p>
-                <ArrowForwardOutlinedIcon/>
-              </td>
+              <Link to='/singleform'>
+                <td className={styles.formTableRowSeeMore}>
+                  <p>See More</p>
+                  <ArrowForwardOutlinedIcon/>
+                </td>
+              </Link>
 
             </tr>
           ))}
