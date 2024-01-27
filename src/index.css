@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
-  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   width: 100vw;
@@ -23,4 +32,10 @@ body{
   display: flex;
   align-items: center;
   gap: 16px;
+}
+.form-card-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(288px, 1fr)); /* Four items per row */
+  padding-top: 0px 120px;
+  gap: 40px; 
 }
