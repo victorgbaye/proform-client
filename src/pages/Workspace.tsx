@@ -8,7 +8,7 @@ const Workspace = () => {
   return (
     <>
     <PageHeader>
-        <p className="page-title">Form Builder</p>
+        <p className="page-title">proform</p>
         <div className="page-header-right">
             <SearchBar/>
             <img src={profile}/>
