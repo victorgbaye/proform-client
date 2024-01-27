@@ -19,6 +19,7 @@ export const Dropdown = styled.div<{ isopen: boolean }>`
         align-items: center;
         gap: var(--XS, 8px);
         align-self: stretch;
+        cursor: pointer;
 
 
         p{

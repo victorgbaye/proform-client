@@ -14,7 +14,7 @@ const Workspace = () => {
             <img src={profile}/>
         </div>
     </PageHeader>
-    <section style={{padding:'0 120px'}}>
+    <section style={{padding:'0 120px, '}}>
         <div style={{padding:'20px 0'}}>
             <Button>
                 <img src={newform}/>

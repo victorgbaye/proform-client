@@ -36,6 +36,6 @@ body{
 .form-card-grid{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(288px, 1fr)); /* Four items per row */
-  padding-top: 0px 120px;
-  gap: 40px; 
+  /* padding-top: 0px 120px; */
+  gap: 20px; 
 }

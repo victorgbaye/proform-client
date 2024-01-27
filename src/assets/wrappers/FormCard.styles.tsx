@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
         background-color: #5D55F7;
         width: 100%;
         height: 138px;
-        
+        cursor: pointer;
     }
     .form-card-details-container{
         border-top: 1px solid var(--cod-gray-border-divider, #E5E5E5);
@@ -29,6 +29,7 @@ export const Wrapper = styled.div`
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+
             .form-card-title{
                 color: var(--Cod-Gray-Primary-Text, #171717);
                 font-family: 'Quicksand';
@@ -48,6 +49,18 @@ export const Wrapper = styled.div`
                 letter-spacing: 0.5px;
             }
         }
-
+        .form-card-ellipsis{
+            .ellipsis{
+                border: 1px solid red;
+                border: 1px solid white;
+                padding: 8px;
+            }
+            .ellipsis:hover{
+                /* padding: 8px; */
+                cursor: pointer;
+                border-radius: 8px;
+                background:  #e7e7e7;
+            }
+        }
     }
 `;

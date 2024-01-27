@@ -46,8 +46,8 @@ const FormCard = () => {
                 <p className="form-card-title">Document Name</p>
                 <p className="form-card-description">Document long description</p>
             </div>
-            <div>
-                <img src={ellipsis} onClick={toggleDropdown} style={{cursor:'pointer'}}/>
+            <div className="form-card-ellipsis">
+                <img src={ellipsis} onClick={toggleDropdown} className="ellipsis"/>
                 <Dropdown isopen={isOpen} ref={dropdownRef}>
                     <span>
                         <img src={eye}/>
