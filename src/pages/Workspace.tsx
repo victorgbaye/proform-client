@@ -4,6 +4,7 @@ import profile from '../assets/images/profile.svg'
 import { Button } from "../components/elements/Button/Button.styles"
 import newform from '../assets/images/newform.svg'
 import FormCard from "../components/patterns/FormCard"
+import { Link } from "react-router-dom"
 const Workspace = () => {
   return (
     <>
@@ -16,10 +17,12 @@ const Workspace = () => {
     </PageHeader>
     <section style={{padding:'0 120px'}}>
         <div style={{padding:'20px 0'}}>
-            <Button>
-                <img src={newform}/>
-                <p>New form</p>
-            </Button>
+            <Link to='/form' style={{textDecoration:'none'}}>
+                <Button>
+                    <img src={newform}/>
+                    <p>New form</p>
+                </Button>
+            </Link>
         </div>
         <section className="form-card-grid">
             <FormCard/>

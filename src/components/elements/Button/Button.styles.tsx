@@ -14,3 +14,13 @@ export const Button = styled.button`
     gap: var(--SM, 16px);
     cursor: pointer;
 `;
+interface ExtendedButtonProps{
+    backgroundColor?:string;
+    border?:string;
+    color?:string;
+}
+export const ExtendedButton = styled(Button)<ExtendedButtonProps>`
+    background: ${(props) => props.backgroundColor};
+    border: ${(props) => props.border};
+    color: ${(props) => props.color};
+`
