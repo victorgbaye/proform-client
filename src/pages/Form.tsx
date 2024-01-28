@@ -21,7 +21,6 @@ const Form = () => {
                     <p>Share</p>
                 </ExtendedButton>
             </div>
-
         </PageHeader>
     </div>
   )

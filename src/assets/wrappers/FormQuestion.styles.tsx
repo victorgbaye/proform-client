@@ -10,4 +10,10 @@ export const Wrapper = styled.div`
     border-radius: var(--XS, 8px);
     border: 1px solid var(--cod-gray-border-divider, #E5E5E5);
     background: var(--Neutral-Base, #FFF);
+
+    .question{
+        border-radius: var(--XS, 8px);
+        border: 1px solid var(--cod-gray-border-divider, #E5E5E5);
+        background: var(--Cod-Gray-Surface, #FAFAFA);
+    }
 `;
