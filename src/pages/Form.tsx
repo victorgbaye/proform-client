@@ -3,6 +3,7 @@ import chevronLeft from '../assets/images/chevronLeft.svg'
 import { ExtendedButton } from "../components/elements/Button/Button.styles"
 import shareW from '../assets/images/shareW.svg'
 import eye from '../assets/images/eye.svg'
+import FormQuestion from "../components/patterns/FormQuestion"
 const Form = () => {
   return (
     <div>
@@ -22,6 +23,9 @@ const Form = () => {
                 </ExtendedButton>
             </div>
         </PageHeader>
+        <section>
+            <FormQuestion/>
+        </section>
     </div>
   )
 }
