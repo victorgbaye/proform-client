@@ -1,21 +1,22 @@
-// interface CustomSelectProps{
-//     options: Option[];
-//     onChange: (value: string) => void;
-//     defaultValue?: string;
-//     placeholder?: string;
-// }
+interface CustomSelectProps{
+    // options: Option[];
+    options: [];
+    onChange: (value: string) => void;
+    defaultValue?: string;
+    placeholder?: string;
+}
 
-// export const CustomSelect: React.FC<CustomSelectProps> = (
-//     {
-//         options,
-//         onChange,
-//         defaultValue = '',
-//         placeholder = 'Select an option',
-//       }
-// ) =>{
+export const CustomSelect: React.FC<CustomSelectProps> = (
+    // {
+    //     options,
+    //     onChange,
+    //     defaultValue = '',
+    //     placeholder = 'Select an option',
+    //   }
+) =>{
 
-//     return(
-//         <>
-//         </>
-//     )
-// }
+    return(
+        <>
+        </>
+    )
+}
