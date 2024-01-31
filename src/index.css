@@ -47,7 +47,7 @@ body{
   justify-content: space-between;
   max-width: 1440px;
 }
-input {
+input, textarea {
   border: none;
   outline: none;
   background-color: transparent;
