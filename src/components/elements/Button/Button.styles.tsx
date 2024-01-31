@@ -11,7 +11,7 @@ export const Button = styled.button`
     height: 36px;
     justify-content: center;
     align-items: center;
-    gap: var(--SM, 16px);
+    gap: var(--SM, 8px);
     cursor: pointer;
 `;
 interface ExtendedButtonProps{

@@ -10,6 +10,9 @@ export const Wrapper = styled.div`
     border-radius: var(--XS, 8px);
     border: 1px solid var(--cod-gray-border-divider, #E5E5E5);
     background: var(--Neutral-Base, #FFF);
+    width: 595px;
+    margin: 0 auto;
+
 
     .question{
         border-radius: var(--XS, 8px);

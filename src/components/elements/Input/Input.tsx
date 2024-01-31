@@ -1,3 +1,4 @@
+import { CheckboxInput, CheckboxWrapper, CustomCheckbox } from "./Input.styles";
 interface CustomSelectProps{
     // options: Option[];
     options: [];
@@ -20,3 +21,18 @@ export const CustomSelect: React.FC<CustomSelectProps> = (
         </>
     )
 }
+
+type Checkbpxprop = {
+    checked: boolean;
+    onChange: () => void;
+    placeholder:string
+ }
+
+export const Checkbox = (props: Checkbpxprop) => {
+    return (
+        <CheckboxWrapper>
+        <CustomCheckbox type='checkbox'  checked={props.checked} onChange={props.onChange}/>
+        <CheckboxInput placeholder={props.placeholder}></CheckboxInput>
+      </CheckboxWrapper>
+    );
+  };

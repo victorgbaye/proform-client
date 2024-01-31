@@ -5,6 +5,10 @@ import shareW from '../assets/images/shareW.svg'
 import eye from '../assets/images/eye.svg'
 import FormQuestion from "../components/patterns/FormQuestion"
 const Form = () => {
+    const handleQuestionTypeChange = (type: string) => {
+        console.log(`Selected question type: ${type}`);
+        // You can perform any other actions based on the selected question type here
+      };
   return (
     <div>
         <PageHeader>
@@ -24,7 +28,7 @@ const Form = () => {
             </div>
         </PageHeader>
         <section>
-            <FormQuestion/>
+            <FormQuestion onQuestionTypeChange={handleQuestionTypeChange}/>
         </section>
     </div>
   )
