@@ -13,7 +13,10 @@ export const Wrapper = styled.div`
     width: 595px;
     margin: 0 auto;
 
-
+    .container{
+        background: black;
+    }
+    
     .question{
         border-radius: var(--XS, 8px);
         border: 1px solid var(--cod-gray-border-divider, #E5E5E5);
@@ -35,5 +38,8 @@ export const Wrapper = styled.div`
         font-weight: 500;
         line-height: 22px; /* 157.143% */
         letter-spacing: 0.5px;
+    }
+    &:hover {
+        border-color: #5D55F7; /* For example, change the border color to red on hover */
     }
 `;

@@ -1,4 +1,4 @@
-import { CheckboxInput, CheckboxWrapper, CustomCheckbox } from "./Input.styles";
+import { CheckboxInput, CheckboxWrapper, CustomCheckbox, CustomRadioButton } from "./Input.styles";
 interface CustomSelectProps{
     // options: Option[];
     options: [];
@@ -32,6 +32,15 @@ export const Checkbox = (props: Checkbpxprop) => {
     return (
         <CheckboxWrapper>
         <CustomCheckbox type='checkbox'  checked={props.checked} onChange={props.onChange}/>
+        <CheckboxInput placeholder={props.placeholder}></CheckboxInput>
+      </CheckboxWrapper>
+    );
+  };
+
+  export const Radio = (props: Checkbpxprop) => {
+    return (
+        <CheckboxWrapper>
+        <CustomRadioButton type='checkbox'  checked={props.checked} onChange={props.onChange}/>
         <CheckboxInput placeholder={props.placeholder}></CheckboxInput>
       </CheckboxWrapper>
     );
