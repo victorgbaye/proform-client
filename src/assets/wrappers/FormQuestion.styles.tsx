@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
     padding: 16px;
-    padding-bottom: 0;
+    /* padding-bottom: 0; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;

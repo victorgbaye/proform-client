@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import { Wrapper } from "../../assets/wrappers/FormQuestion.styles";
 import CustomSelect from "./CustomSelect";
 import { Link, LongText, MultiChoice, ShortText, SingleChoice } from "./FormQuestionResponses";
+import drag from '../../assets/images/drag.svg'
+import cloneW from '../../assets/images/cloneW.svg'
+import trashW from '../../assets/images/trashW.svg'
+import { CustomToggle } from "../elements/Input/Input";
+import { QuestionFooter } from "../../assets/wrappers/QuestionFooter.styles";
+
 
 interface QuestionProps {
   id: number;
@@ -50,9 +56,21 @@ const FormQuestion: React.FC<QuestionProps> = ({ id, onQuestionTypeChange }) => 
         </section>
         {inputComponents[questionType]}
         </Wrapper>
-        <section className="question-footer">
-
-        </section>
+        <QuestionFooter>
+            <div className="drag"><img src={drag}/></div>
+            <div className="footer-right">
+                <div className="items required">
+                    <CustomToggle/>
+                    <p>Required</p>
+                </div>
+                <div  className="items">
+                    <img src={cloneW}/>
+                </div>
+                <div  className="items">
+                    <img src={trashW}/>
+                </div>
+            </div>
+        </QuestionFooter>
     </div>
   );
 };

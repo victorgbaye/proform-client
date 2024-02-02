@@ -88,6 +88,7 @@ align-self: stretch;
 
 .question-footer{
   display: flex;
+  justify-content: space-between;
   min-height: 40px;
   width: 595px;
   border-top: 1px solid var(--cod-gray-border-divider, #262626);
