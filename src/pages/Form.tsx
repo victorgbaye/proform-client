@@ -59,12 +59,18 @@ const Form = () => {
           </ExtendedButton>
         </div>
       </PageHeader>
+      <header
+      className="form-header"
+      >
+        <input value='Form Title' className="form-title" readOnly/>
+        <input value='A brief description for the form' className="form-description" readOnly/>
+      </header>
       <section
         style={{
           display: 'flex',
           flexDirection: 'column',
           gap: '20px',
-          marginTop: '60px',
+          marginTop: '20px',
         }}
       >
         {questions.map(({ id }) => (

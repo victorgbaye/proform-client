@@ -26,28 +26,34 @@ const FormQuestion: React.FC<QuestionProps> = ({ id, onQuestionTypeChange }) => 
   };
 
   return (
-    <Wrapper draggable>
-      <input className="question" placeholder="Type text or question here" />
-      <section className="answer-type">
-        <p className="answer-type-text">Answer type</p>
-        <CustomSelect
-          options={[
-            { value: 'Multi-select', label: 'Multi-select' },
-            { value: 'Single choice select', label: 'Single choice select' },
-            { value: 'Small text area', label: 'Small text area' },
-            { value: 'Large text area', label: 'Large text area' },
-            { value: 'Contact info', label: 'Contact info' },
-            { value: 'Calendar', label: 'Calendar' },
-            { value: 'Link', label: 'Link' },
-            { value: 'Rating', label: 'Rating' },
-            { value: 'File Upload', label: 'File Upload' },
-            // Add more options as needed
-          ]}
-          onChange={handleQuestionTypeChange}
-        />
-      </section>
-      {inputComponents[questionType]}
-    </Wrapper>
+    <div>
+
+        <Wrapper draggable>
+        <input className="question" placeholder="Type text or question here" />
+        <section className="answer-type">
+            <p className="answer-type-text">Answer type</p>
+            <CustomSelect
+            options={[
+                { value: 'Multi-select', label: 'Multi-select' },
+                { value: 'Single choice select', label: 'Single choice select' },
+                { value: 'Small text area', label: 'Small text area' },
+                { value: 'Large text area', label: 'Large text area' },
+                { value: 'Contact info', label: 'Contact info' },
+                { value: 'Calendar', label: 'Calendar' },
+                { value: 'Link', label: 'Link' },
+                { value: 'Rating', label: 'Rating' },
+                { value: 'File Upload', label: 'File Upload' },
+                // Add more options as needed
+            ]}
+            onChange={handleQuestionTypeChange}
+            />
+        </section>
+        {inputComponents[questionType]}
+        </Wrapper>
+        <section className="question-footer">
+
+        </section>
+    </div>
   );
 };
 

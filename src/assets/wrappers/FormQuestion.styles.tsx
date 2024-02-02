@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
     padding: 16px;
-    padding-bottom: none;
+    padding-bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -12,6 +12,10 @@ export const Wrapper = styled.div`
     background: var(--Neutral-Base, #FFF);
     width: 595px;
     margin: 0 auto;
+    border-bottom-right-radius:0px;
+    border-bottom-left-radius:0px;
+
+
 
     .container{
         background: black;
@@ -38,6 +42,12 @@ export const Wrapper = styled.div`
         font-weight: 500;
         line-height: 22px; /* 157.143% */
         letter-spacing: 0.5px;
+    }
+    .question-footer{
+        min-height: 40px;
+        width: 100%;
+        border-top: 1px solid var(--cod-gray-border-divider, #262626);
+        background: var(--Cod-Gray-Surface, #171717);
     }
     &:hover {
         border-color: #5D55F7; /* For example, change the border color to red on hover */
