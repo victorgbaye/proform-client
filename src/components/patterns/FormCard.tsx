@@ -48,7 +48,7 @@ const FormCard = () => {
             </div>
             <div className="form-card-ellipsis">
                 <img src={ellipsis} onClick={toggleDropdown} className="ellipsis"/>
-                <Dropdown isopen={isOpen} ref={dropdownRef}>
+                <Dropdown isopen={isOpen} ref={dropdownRef} style={{right:0}}>
                     <span>
                         <img src={eye}/>
                         <p>Open</p>

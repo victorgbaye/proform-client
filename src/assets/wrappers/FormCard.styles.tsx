@@ -53,6 +53,7 @@ export const Wrapper = styled.div`
             }
         }
         .form-card-ellipsis{
+            position: relative;
             .ellipsis{
                 border: 1px solid red;
                 border: 1px solid white;

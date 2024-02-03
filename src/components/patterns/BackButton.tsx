@@ -26,7 +26,7 @@ const BackButton: React.FC = () => {
   return (
     <div onClick={handleGoBack} style={{display:'flex', alignItems:'center', gap:'8px', cursor:'pointer'}}>
         <img src={chevronLeft}/>
-        <p>Back</p>
+        <p style={{fontSize:'14px'}}>Back</p>
     </div>
   );
 };

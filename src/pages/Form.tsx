@@ -62,8 +62,8 @@ const Form = () => {
       <header
       className="form-header"
       >
-        <input value='Form Title' className="form-title" readOnly/>
-        <input value='A brief description for the form' className="form-description" readOnly/>
+        <input value='Form Title' className="form-title"/>
+        <input value='A brief description for the form' className="form-description"/>
       </header>
       <section
         style={{

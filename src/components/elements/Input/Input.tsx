@@ -1,4 +1,20 @@
-import { CheckboxInput, CheckboxWrapper, CustomCheckbox, CustomRadioButton, CustomToggleWrapper, ToggleInput, ToggleSlider } from "./Input.styles";
+import { CheckboxInput, CheckboxWrapper, CustomCheckbox, CustomRadioButton, CustomToggleWrapper, DefaultInput, Label, ToggleInput, ToggleSlider } from "./Input.styles";
+
+type InputProps = {
+    label: string,
+    placeholder:string
+}
+export const Input = (props: InputProps) => {
+    return (
+        <div className='input-label'>  
+        <Label>{props.label}</Label>
+        <DefaultInput
+        placeholder={props.placeholder}
+        />
+    </div>
+  )
+}
+
 interface CustomSelectProps{
     // options: Option[];
     options: [];

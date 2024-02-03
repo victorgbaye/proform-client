@@ -2,20 +2,62 @@ import { PageHeader } from "../assets/wrappers/PageHeader.styles"
 import SearchBar from "../components/patterns/SearchBar"
 import profile from '../assets/images/profile.svg'
 import empty from '../assets/images/empty.svg'
+import user from '../assets/images/user.svg'
+import logout from '../assets/images/logout.svg'
 import { Button } from "../components/elements/Button/Button.styles"
 import newform from '../assets/images/newform.svg'
 import FormCard from "../components/patterns/FormCard"
 import { Link } from "react-router-dom"
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
+import { Dropdown } from "../assets/wrappers/Dropdown.styles"
 const Workspace = () => {
-    const [isEmpty] = useState(true)
+    const [isEmpty] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
+    const dropdownRef = useRef<HTMLDivElement>(null); 
+    const toggleDropdown = () => {
+        setIsOpen(!isOpen);
+        console.log('hey');
+    };
+
+    
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+                setIsOpen(false);
+            }
+        };
+        if (isOpen) {
+            // Attach event listener when the component mounts
+            document.addEventListener('mousedown', handleClickOutside);
+            
+        }
+        
+        // Detach event listener when the component unmounts
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isOpen]);
   return (
     <>
     <PageHeader>
         <p className="page-title">proform</p>
         <div className="page-header-right">
             <SearchBar/>
-            <img src={profile}/>
+            <div style={{position:'relative'}}>
+                <img src={profile} onClick={toggleDropdown}/>
+                <Dropdown isopen={isOpen} ref={dropdownRef} style={{right:'0px', width:'190px'}}>
+                    <Link to='/account' style={{textDecoration:'none', color:'inherit', width:'100%'}}>
+                        <span>
+                            <img src={user}/>
+                            <p>Account</p>
+                        </span>
+                    </Link>
+                    <span>
+                        <img src={logout}/>
+                        <p>Log out</p>
+                    </span>
+                </Dropdown>
+            </div>
         </div>
     </PageHeader>
     <section style={{padding:'0 120px', marginTop:'60px'}}>
