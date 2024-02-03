@@ -2,6 +2,9 @@ import { PageHeader } from "../assets/wrappers/PageHeader.styles";
 import { ExtendedButton } from "../components/elements/Button/Button.styles";
 import shareW from '../assets/images/shareW.svg';
 import eye from '../assets/images/eye.svg';
+import settings from '../assets/images/settings.svg';
+import undo from '../assets/images/undo.svg';
+import redo from '../assets/images/redo.svg';
 import FormQuestion from "../components/patterns/FormQuestion";
 import { useState, useRef } from "react";
 import BackButton from "../components/patterns/BackButton";
@@ -48,14 +51,27 @@ const Form = () => {
     <div style={{ position: 'relative' }}>
       <PageHeader>
         <BackButton />
+        <div>
+            
+        </div>
         <div className="page-header-right">
-          <ExtendedButton backgroundColor="none" color="#404040" border="none">
+        <ExtendedButton color="#404040" backgroundColor="#FAFAFA" border="#FAFAFA" style={{padding:'10px'}}>
+            <img src={undo} alt="Preview Eye" />
+          </ExtendedButton>
+          <ExtendedButton color="#404040" backgroundColor="#FAFAFA" border="#FAFAFA" style={{padding:'10px'}}>
+            <img src={redo} alt="Preview Eye" />
+          </ExtendedButton>
+        <ExtendedButton color="#404040" backgroundColor="#FAFAFA" border="#FAFAFA" style={{padding:'10px'}}>
+            <img src={settings} alt="Preview Eye" />
+          </ExtendedButton>
+          <ExtendedButton color="#404040" backgroundColor="#FAFAFA" border="#FAFAFA" style={{padding:'10px'}}>
             <img src={eye} alt="Preview Eye" />
-            <p>Preview</p>
+          </ExtendedButton>
+          <ExtendedButton color="#404040" backgroundColor="#FAFAFA" border="#FAFAFA">
+            <p>Share</p>
           </ExtendedButton>
           <ExtendedButton color="#EDF1FF">
-            <img src={shareW} alt="Share Icon" />
-            <p>Share</p>
+            <p>Publish</p>
           </ExtendedButton>
         </div>
       </PageHeader>

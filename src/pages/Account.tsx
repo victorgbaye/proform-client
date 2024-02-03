@@ -10,15 +10,20 @@ import chevronLeft from '../assets/images/chevronLeft.svg'
 import { AccountWrapper } from "../assets/wrappers/Account.styles"
 import { Button, ExtendedButton } from "../components/elements/Button/Button.styles"
 import { Input } from "../components/elements/Input/Input"
+import Modal from "../components/patterns/Modal"
 const Account = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     const dropdownRef = useRef<HTMLDivElement>(null); 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
         console.log('hey');
     };
 
-    
+    const handleChangePassword = () =>{
+        setIsModalOpen(!isModalOpen)
+    };
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -36,6 +41,7 @@ const Account = () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, [isOpen]);
+
   return (
     <>
         <PageHeader>
@@ -83,10 +89,19 @@ const Account = () => {
                 </div>
                 <div className="change-password">
                     <Input label="Password" placeholder="********"/>
-                    <ExtendedButton backgroundColor="#EDF1FF" color="#5D55F7" border="none">Change password</ExtendedButton>
+                    <ExtendedButton backgroundColor="#EDF1FF" color="#5D55F7" border="none" onClick={handleChangePassword}>Change password</ExtendedButton>
                 </div>
             </main>
         </AccountWrapper>
+        {
+            isModalOpen &&
+            <Modal title="Change password" closeModal={()=>setIsModalOpen(false)} buttonLabel="Save" onConfirm={handleChangePassword} >
+                <div className="new-password-modal-content">
+                    <Input label="current password" placeholder="Enter password"/>
+                    <Input label="new password" placeholder="Enter new password"/>
+                </div>
+            </Modal>
+        }
     </>
   )
 }
