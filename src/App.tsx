@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Workspace from "./pages/Workspace"
-import Form from './pages/Form';
+// import Form from './pages/Form';
 import Account from './pages/Account';
+import Form from './pages/Form';
 
 function App() {
 

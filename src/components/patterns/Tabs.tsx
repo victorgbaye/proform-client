@@ -26,7 +26,6 @@ const Tabs: React.FC<TabsProps> = ({tabs}) => {
             {tab.label}
           </TabButton>
         ))}
-        <p>heloooooo</p>
       </TabContainer>
       <TabContent>{tabs[activeTab].content}</TabContent>
     </>

@@ -6,10 +6,15 @@ import undo from '../assets/images/undo.svg';
 import redo from '../assets/images/redo.svg';
 
 import BackButton from "../components/patterns/BackButton";
-import Tabs from "../components/patterns/Tabs";
+import { TabButton, TabContainer, TabContent } from "../assets/wrappers/Tabs.styles";
+import { useState } from "react";
 // import Form from "./Form";
 
 const FormEnviroment = () => {
+    const [activeTab, setActiveTab] = useState(0);
+    const handleTabClick = (index: number) => {
+        setActiveTab(index);
+      };
   const tabsData = [
     { label: 'Form', content: <p>hello</p>},
     { label: 'Responses', content:<p>hello</p> },
@@ -21,7 +26,17 @@ const FormEnviroment = () => {
       <PageHeader>
         <BackButton />
         <div style={{position: 'absolute', bottom: '0', left: '50%', transform: 'translate( -50%)'}}>
-        <Tabs tabs={tabsData} />
+        <TabContainer className='tab-content'>
+        {tabsData.map((tab, index) => (
+          <TabButton
+            key={index}
+            isActive={index === activeTab}
+            onClick={() => handleTabClick(index)}
+          >
+            {tab.label}
+          </TabButton>
+        ))}
+      </TabContainer>
         </div>
         <div className="page-header-right">
         <ExtendedButton color="#404040" backgroundColor="#FAFAFA" border="#FAFAFA" style={{padding:'10px'}}>
@@ -45,6 +60,8 @@ const FormEnviroment = () => {
         </div>
       </PageHeader>
       <section>
+      <TabContent>{tabsData[activeTab].content}</TabContent>
+      
       </section>
     </div>
   );

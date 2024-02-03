@@ -7,7 +7,7 @@ export const PageHeader = styled.header`
     /* width: 100%; */
     max-height: 60px;
     min-height: 60px;
-    padding: 0px var(--LG, 24px);
+    padding: 0px var(--LG, 40px);
     border-bottom: 1px solid var(--cod-gray-border-divider, #E5E5E5);
     background: var(--Neutral-Base, #FFF);
     position: fixed;
