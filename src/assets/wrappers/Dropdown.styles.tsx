@@ -12,6 +12,7 @@ export const Dropdown = styled.div<{ isopen: boolean }>`
     border: 1px solid var(--cod-gray-border-divider, #E5E5E5);
     background: var(--Neutral-Base, #FFF);
     box-shadow: -2px 2px 12.1px 0px rgba(0, 0, 0, 0.05);
+    z-index: 1;
 
     span{
         display: flex;
