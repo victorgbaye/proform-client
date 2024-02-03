@@ -4,8 +4,8 @@ export const AccountWrapper = styled.section`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
-    place-content: center;
+    justify-content: space-between;
+    /* place-content: center; */
     place-items: center;
     margin: 0 auto;
     margin-top: 80px;
@@ -60,6 +60,11 @@ export const AccountWrapper = styled.section`
         border: 1px solid var(--cod-gray-border-divider, #E5E5E5);
         background: var(--Neutral-Base, #FFF);
 
+    }
+    .change-avatar{
+        display: flex;
+        align-items: flex-end;
+        gap: 20px;
     }
     .input-container{
         width: 100%;

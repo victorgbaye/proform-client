@@ -60,17 +60,20 @@ const Account = () => {
             </div>
         </PageHeader>
         <AccountWrapper>
-            <nav>
-                <img src={chevronLeft}/>
-                <p>Forms</p>
-            </nav>
+            <Link to='/workspace' style={{textDecoration:'none'}}>
+                <nav>
+                    <img src={chevronLeft}/>
+                    <p>Forms</p>
+                </nav>
+            </Link>
             <header>
                 <p>Account</p>
                 <Button>Save</Button>
             </header>
             <main>
-                <div>
-
+                <div className="change-avatar">
+                    <img src={profile}/>
+                    <ExtendedButton backgroundColor="#EDF1FF" color="#5D55F7" border="none">Change avatar</ExtendedButton>
                 </div>
                 <div className="input-container">
                     <Input label="Full name" placeholder="Johnson Doe"/>
