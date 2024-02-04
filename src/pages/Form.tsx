@@ -20,7 +20,6 @@ const Form = () => {
   const tabsData = [
     { label: 'Form', content: <Edit/>},
     { label: 'Responses', content:<Responses/> },
-    { label: 'Dashboard', content: <p>here</p> },
   ];
   const [activeTab, setActiveTab] = useState(0);
   const handleTabClick = (index: number) => {

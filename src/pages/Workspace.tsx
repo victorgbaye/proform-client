@@ -61,8 +61,8 @@ const Workspace = () => {
         </div>
     </PageHeader>
     <section style={{padding:'0 40px', marginTop:'60px'}}>
-        <div style={{padding:'20px 0'}}>
-            <Link to='/form' style={{textDecoration:'none'}}>
+        <div style={{padding:'20px 0', width:'fit-content'}}>
+            <Link to='/form' style={{textDecoration:'none',}}>
                 <Button>
                     <img src={newform}/>
                     <p>New form</p>

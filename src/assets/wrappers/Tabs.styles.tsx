@@ -22,6 +22,13 @@ export const TabButton = styled.button<{ isActive: boolean }>`
   background: ${(props) => (props.isActive ? '#EDF1FF' : 'transparent')};
   border-radius: ${(props) => (props.isActive ? '4px 4px 0px 0px' : 'none')};
   padding: var(--XS, 8px) var(--SM, 16px);
+  color: #000;
+  font-family: 'Quicksand';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 157.143% */
+  letter-spacing: 0.5px;
 
 
   &:hover {
