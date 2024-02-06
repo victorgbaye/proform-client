@@ -1,4 +1,4 @@
-import { CheckboxInput, CheckboxWrapper, CustomCheckbox, CustomRadioButton, CustomToggleWrapper, DefaultInput, Label, ToggleInput, ToggleSlider } from "./Input.styles";
+import { CheckboxInput, CheckboxWrapper, CustomCheckbox, CustomRadioButton, CustomToggleWrapper, DefaultInput, Label, ResponseCheckboxInput, ToggleInput, ToggleSlider } from "./Input.styles";
 
 type InputProps = {
     label: string,
@@ -44,11 +44,28 @@ type Checkbpxprop = {
     placeholder:string
  }
 
+
+ 
+
+ type ResponseCheckbpxprop = {
+  checked: boolean | undefined;
+  value:string
+}
 export const Checkbox = (props: Checkbpxprop) => {
     return (
         <CheckboxWrapper>
         <CustomCheckbox type='checkbox'  checked={props.checked} onChange={props.onChange}/>
         <CheckboxInput placeholder={props.placeholder}></CheckboxInput>
+      </CheckboxWrapper>
+    );
+  };
+
+
+  export const ResponseCheckbox = (props: ResponseCheckbpxprop) => {
+    return (
+        <CheckboxWrapper>
+        <CustomCheckbox type='checkbox'  checked={props.checked}/>
+        <ResponseCheckboxInput value={props.value}></ResponseCheckboxInput>
       </CheckboxWrapper>
     );
   };
@@ -62,6 +79,14 @@ export const Checkbox = (props: Checkbpxprop) => {
     );
   };
 
+  export const  ResponseRadio = (props: ResponseCheckbpxprop) => {
+    return (
+        <CheckboxWrapper>
+        <CustomRadioButton type='checkbox'  checked={props.checked}/>
+        <ResponseCheckboxInput value={props.value}></ResponseCheckboxInput>
+      </CheckboxWrapper>
+    );
+  };
   export const CustomToggle = () => {
     return (
         <CustomToggleWrapper>

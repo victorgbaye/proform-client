@@ -47,7 +47,7 @@ export const Label = styled.label`
 export const CheckboxWrapper = styled.div`
   display: flex;
   align-items: center;
-  cursor: pointer;
+  /* cursor: pointer; */
   user-select: none;
 `;
 
@@ -61,8 +61,10 @@ export const CustomCheckbox = styled.input`
   outline: none;
 
   &:checked {
-    background-color: #FDF3FF;
-    border-color: #7C2C89;
+    background-color: #5D55F7;
+    border-color: #5D55F7;
+    cursor: pointer;
+
     
   }
 
@@ -97,6 +99,26 @@ export const CheckboxInput = styled.input`
     margin-left: 8px; /* Adjust spacing as needed */
 
 `;
+export const ResponseCheckboxInput = styled(CheckboxInput)`
+    display: flex;
+    height: fit-content;
+    padding: 0px var(--XS, 8px);
+    align-items: center;
+    gap: 10px;
+    border: none;
+    background: none;
+    margin-left: 8px; /* Adjust spacing as needed */
+    color: var(--Text-Secondary-Text, #404040);
+
+    /* Body/4aims.type.body.s */
+    font-family: 'Quicksand';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.5px;
+
+`;
 
 
 
@@ -112,6 +134,7 @@ export const CustomRadioButton = styled.input.attrs({ type: 'radio' })`
   &:checked {
     background-color: #FDF3FF;
     border-color: #7C2C89;
+    cursor: pointer;
   }
 
   &:checked::after {
