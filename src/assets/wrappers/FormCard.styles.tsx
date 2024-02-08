@@ -11,22 +11,27 @@ export const Wrapper = styled.div`
     flex: 1 0 0;
     border-radius: var(--XS, 8px);
     border: 1px solid var(--cod-gray-border-divider, #E5E5E5);
+    background-color: #5D55F7;
+
 
     .form-card-thumbnail{
-        background-color: #5D55F7;
         width: 100%;
         height: 138px;
         cursor: pointer;
     }
     .form-card-details-container{
         border-top: 1px solid var(--cod-gray-border-divider, #E5E5E5);
-        /* background: var(--Neutral-Base, #FFF); */
+        background: var(--Neutral-Base, #FFF);
         display: flex;
         padding: var(--SM, 16px);
         padding-right: 8px;
         justify-content: space-between;
         align-items: flex-start;
         align-self: stretch;
+        width: 100%;
+        /* border-radius: var(--XS, 8px); */
+
+
 
         .form-card-details{
             display: flex;
