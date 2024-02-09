@@ -65,7 +65,6 @@ const Form = () => {
       </PageHeader>
       <div style={{ marginTop:'80px'}}>
 
-      {/* <TabContent>{tabsData[activeTab].content}</TabContent> */}
       {tabsData[activeTab].content}
       </div>
     </div>

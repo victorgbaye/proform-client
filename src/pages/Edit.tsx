@@ -40,7 +40,7 @@ const Edit = () => {
       draggedOverQuestion.current = null;
     }
   };
-  
+
   return (
     <div style={{ position: 'relative' }}>
 
@@ -67,7 +67,7 @@ const Edit = () => {
             onDragEnd={handleSortQuestions}
             onDragOver={(e) => e.preventDefault()}
           >
-            <FormQuestion id={id} onQuestionTypeChange={handleQuestionTypeChange} />
+            <FormQuestion id={id} onQuestionTypeChange={handleQuestionTypeChange}/>
           </div>
         ))}
         {/* <FormEnviroment/> */}
