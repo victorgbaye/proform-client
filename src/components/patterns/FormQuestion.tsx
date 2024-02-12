@@ -12,6 +12,7 @@ import { QuestionFooter } from "../../assets/wrappers/QuestionFooter.styles";
 interface QuestionProps {
   id: number;
   onQuestionTypeChange: (id: number, type: string) => void;
+  onDelete: (id: number) => void; 
 }
 
 const inputComponents: Record<string, React.ReactElement> = {
@@ -25,14 +26,16 @@ const inputComponents: Record<string, React.ReactElement> = {
   // Add more question types as needed
 };
 
-const FormQuestion: React.FC<QuestionProps> = ({ id, onQuestionTypeChange }) => {
+const FormQuestion: React.FC<QuestionProps> = ({ id, onQuestionTypeChange, onDelete }) => {
   const [questionType, setQuestionType] = useState<string>('Small text area'); // Set the default value here
 
   const handleQuestionTypeChange = (value: string) => {
     setQuestionType(value);
     onQuestionTypeChange(id, value);
   };
-
+  const handleDeleteClick = () => {
+    onDelete(id);
+  };
   return (
     <div>
 
@@ -69,7 +72,7 @@ const FormQuestion: React.FC<QuestionProps> = ({ id, onQuestionTypeChange }) => 
                     <img src={cloneW}/>
                 </div>
                 <div  className="items">
-                    <img src={trashW}/>
+                    <img src={trashW} onClick={handleDeleteClick}/>
                 </div>
             </div>
         </QuestionFooter>

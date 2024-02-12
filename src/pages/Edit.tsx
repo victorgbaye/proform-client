@@ -40,7 +40,9 @@ const Edit = () => {
       draggedOverQuestion.current = null;
     }
   };
-
+  const handleDeleteQuestion = (id: number) => {
+    setQuestions(questions.filter(question => question.id !== id));
+  };
   return (
     <div style={{ position: 'relative' }}>
 
@@ -67,7 +69,7 @@ const Edit = () => {
             onDragEnd={handleSortQuestions}
             onDragOver={(e) => e.preventDefault()}
           >
-            <FormQuestion id={id} onQuestionTypeChange={handleQuestionTypeChange}/>
+            <FormQuestion id={id} onQuestionTypeChange={handleQuestionTypeChange} onDelete={handleDeleteQuestion}/>
           </div>
         ))}
         {/* <FormEnviroment/> */}
