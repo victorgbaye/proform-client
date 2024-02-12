@@ -38,7 +38,7 @@ const Workspace = () => {
         };
     }, [isOpen]);
   return (
-    <>
+    <div style={{background:'#F8FAFF', height:'100vh'}}>
     <PageHeader>
         <p className="page-title">proform</p>
         <div className="page-header-right">
@@ -92,7 +92,7 @@ const Workspace = () => {
             </section>
         }
     </section>
-    </>
+    </div>
   )
 }
 

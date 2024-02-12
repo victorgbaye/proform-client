@@ -43,7 +43,7 @@ const Account = () => {
     }, [isOpen]);
 
   return (
-    <>
+    <div >
         <PageHeader>
             <p className="page-title">proform</p>
             <div className="page-header-right">
@@ -102,7 +102,7 @@ const Account = () => {
                 </div>
             </Modal>
         }
-    </>
+    </div>
   )
 }
 

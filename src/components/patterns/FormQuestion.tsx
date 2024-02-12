@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Wrapper } from "../../assets/wrappers/FormQuestion.styles";
 import CustomSelect from "./CustomSelect";
-import { Link, LongText, MultiChoice, ShortText, SingleChoice } from "./FormQuestionResponses";
+import { Link, LongText, MultiChoice, Rating, ShortText, SingleChoice } from "./FormQuestionResponses";
 import drag from '../../assets/images/drag.svg'
 import cloneW from '../../assets/images/cloneW.svg'
 import trashW from '../../assets/images/trashW.svg'
@@ -20,6 +20,8 @@ const inputComponents: Record<string, React.ReactElement> = {
   'Large text area': <LongText />,
   'Link': <Link />,
   'Single choice select': <SingleChoice />,
+  'Rating': <Rating />,
+
   // Add more question types as needed
 };
 

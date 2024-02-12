@@ -53,16 +53,16 @@ const Form = () => {
             </TabContainer>
         </div>
         <div className="page-header-right">
-        <ExtendedButton color="#404040" backgroundColor="#FAFAFA" border="#FAFAFA" style={{padding:'10px'}}>
+        <ExtendedButton color="#404040" backgroundColor="#FAFAFA" border="#FAFAFA" style={{padding:'10px'}} disabled>
             <img src={undo} alt="Preview Eye" />
           </ExtendedButton>
-            <ExtendedButton color="#404040" backgroundColor="#FAFAFA" border="#FAFAFA" style={{padding:'10px'}}>
+            <ExtendedButton color="#404040" backgroundColor="#FAFAFA" border="#FAFAFA" style={{padding:'10px'}} disabled>
                 <img src={redo} alt="Preview Eye" />
             </ExtendedButton>
         <ExtendedButton color="#404040" backgroundColor="#FAFAFA" border="#FAFAFA" style={{padding:'10px'}}>
             <img src={settings} alt="Preview Eye" />
           </ExtendedButton>
-          <Link to='/form-view'>
+          <Link to='/response-view'>
             <ExtendedButton color="#404040" backgroundColor="#FAFAFA" border="#FAFAFA" style={{padding:'10px'}}>
               <img src={eye} alt="Preview Eye" />
             </ExtendedButton>

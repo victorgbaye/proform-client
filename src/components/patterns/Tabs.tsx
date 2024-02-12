@@ -15,7 +15,7 @@ const Tabs: React.FC<TabsProps> = ({tabs}) => {
         setActiveTab(index);
       };
   return (
-    <>
+    <div style={{display:'flex', flexDirection:'column'}}>
       <TabContainer className='tab-content'>
         {tabs.map((tab, index) => (
           <TabButton
@@ -28,7 +28,7 @@ const Tabs: React.FC<TabsProps> = ({tabs}) => {
         ))}
       </TabContainer>
       <TabContent>{tabs[activeTab].content}</TabContent>
-    </>
+    </div>
   )
 }
 

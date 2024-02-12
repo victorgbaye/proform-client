@@ -8,6 +8,12 @@ export const ResponseCardWrapper = styled.div`
     max-width:1245px;
     width: 100%;
     margin: 0 auto;
+    .response-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
     .card{
         padding: 10px 16px;
         width: 100%;
@@ -50,7 +56,7 @@ export const ResponseCardWrapper = styled.div`
         letter-spacing: 0.5px;
     }
     .card .favourite-view{
-        display: none;
+        display: flex;
         align-items: flex-start;
         gap: 16px;
         height: var(--XL, 36px);
@@ -70,7 +76,7 @@ export const ResponseCardWrapper = styled.div`
             line-height: 21px;
         }
     }
-    .card:hover .favourite-view{
+    /* .card:hover .favourite-view{
         display: flex;
-    }
+    } */
 `;

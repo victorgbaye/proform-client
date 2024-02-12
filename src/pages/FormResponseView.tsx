@@ -5,7 +5,7 @@ import { ResponseCheckbox, ResponseRadio } from "../components/elements/Input/In
 import BackButton from "../components/patterns/BackButton";
 import { dummyFormData } from '../utils/ResponseData';
 
-const FormView = () => {
+const FormResponseView = () => {
   return (
     <>
       <PageHeader>
@@ -48,4 +48,4 @@ const FormView = () => {
   );
 };
 
-export default FormView;
+export default FormResponseView;

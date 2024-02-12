@@ -1,6 +1,9 @@
 import { useState } from "react"
-import { LinkResponse, LongTextResponse, MultiChoiceResponse, ShortTextResponse } from "../../assets/wrappers/FormQuestionResponses.styles"
+import { LinkResponse, LongTextResponse, MultiChoiceResponse, RatingResponse, ShortTextResponse } from "../../assets/wrappers/FormQuestionResponses.styles"
 import { Checkbox, Radio } from "../elements/Input/Input"
+import starFill from '../../assets/images/starFill.svg'
+import starOutline from '../../assets/images/starOutline.svg'
+
 
 export const Link = () =>{
     return(
@@ -76,3 +79,35 @@ export const SingleChoice = () =>{
         </MultiChoiceResponse>
     )
 }
+
+export const Rating = () => {
+    const [rating, setRating] = useState(0);
+  
+    const handleClick = (value: number) => {
+      setRating(value);
+    };
+  
+    return (
+      <RatingResponse>
+        {[...Array(5)].map((_, index) => {
+          const ratingValue = index + 1;
+  
+          return (
+            <label key={index}>
+              <input
+                type="radio"
+                name="rating"
+                value={ratingValue}
+                onClick={() => handleClick(ratingValue)}
+              />
+              <img src={ratingValue <= rating ? starFill : starOutline}/>
+              {/* <FaStar
+                color={ratingValue <= rating ? '#ffc107' : '#e4e5e9'}
+                size={25}
+              /> */}
+            </label>
+          );
+        })}
+      </RatingResponse>
+    );
+  };

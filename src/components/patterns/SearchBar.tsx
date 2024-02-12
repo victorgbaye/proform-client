@@ -4,7 +4,7 @@ const SearchBar = () => {
   return (
     <SearchBarWrapper>
         <img src={search}/>
-        <input placeholder="Search by keyword"/>
+        <input placeholder="Search by keyword" type="text"/>
     </SearchBarWrapper>
   )
 }

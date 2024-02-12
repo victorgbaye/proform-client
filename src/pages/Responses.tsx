@@ -2,11 +2,21 @@ import { ResponseCardWrapper } from "../assets/wrappers/ResponseCard.styles"
 import starOutline from '../assets/images/starOutline.svg'
 import { useState } from "react"
 import starFill from '../assets/images/starFill.svg'
+import Tabs from "../components/patterns/Tabs"
 
 const Responses = () => {
+    const responseFilter = [
+        { label: 'All', content: <p>hello</p>},
+        { label: 'Favorites', content:<p>world</p> },
+      ];
     const [isFavourite, setIsFavourite] = useState(false)
   return (
+    
     <ResponseCardWrapper>
+        <div className="response-header">
+            <Tabs tabs={responseFilter}></Tabs>
+            <p>300 Respondents</p>
+        </div>
         <div className="card">
             <div>
                 <h6>Answer to the first question</h6>

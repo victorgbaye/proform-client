@@ -83,3 +83,14 @@ export const MultiChoiceResponse = styled.div`
     gap: 8px;
     padding-top: 4px;
 `;
+
+
+// RATING
+export const RatingResponse = styled.div`
+display: flex;
+align-items: center;
+gap: 8px;
+    input{
+        display: none;
+    }
+`;
