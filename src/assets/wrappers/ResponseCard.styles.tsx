@@ -15,6 +15,9 @@ export const ResponseCardWrapper = styled.div`
         background: var(--Neutral-Transparent, rgba(255, 255, 255, 0.00));
         box-shadow: 0px 2px 4.8px 0px rgba(0, 0, 0, 0.05);
         border-radius: var(--XS, 8px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
 
 
@@ -45,5 +48,29 @@ export const ResponseCardWrapper = styled.div`
         font-weight: 500;
         line-height: 22px; /* 157.143% */
         letter-spacing: 0.5px;
+    }
+    .card .favourite-view{
+        display: none;
+        align-items: flex-start;
+        gap: 16px;
+        height: var(--XL, 36px);
+        justify-content: center;
+        align-items: center;
+
+        p{
+            display: flex;
+            height: var(--XL, 36px);
+            justify-content: center;
+            align-items: center;
+            color: var(--Interactive-Primary, #5D55F7);
+            font-family: 'Quicksand';
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 21px;
+        }
+    }
+    .card:hover .favourite-view{
+        display: flex;
     }
 `;
