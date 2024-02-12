@@ -10,10 +10,11 @@ interface ModalTypes{
     onConfirm: ()=> void;
     buttonLabel: string;
     backgroundColor?: string;
+    isCanel?: boolean;
 
 }
 
-const Modal: React.FC<ModalTypes> = ({prompt, title, closeModal, buttonLabel, onConfirm, children, backgroundColor}) => {
+const Modal: React.FC<ModalTypes> = ({prompt, title, closeModal, buttonLabel, onConfirm, children, backgroundColor, isCanel}) => {
   return (
     <Wrapper>
     <div className='Modal'>
@@ -31,8 +32,17 @@ const Modal: React.FC<ModalTypes> = ({prompt, title, closeModal, buttonLabel, on
         {
 
         <div className='ModalFooter'>
-           <ExtendedButton onClick={onConfirm} backgroundColor={backgroundColor}>{buttonLabel}</ExtendedButton>
-           <ExtendedButton onClick={closeModal} color='#222' border='none' backgroundColor='#FAFAFA'>Cancel</ExtendedButton>
+           {
+             !isCanel && 
+             (
+               
+               <>
+               <ExtendedButton onClick={onConfirm} backgroundColor={backgroundColor}>{buttonLabel}</ExtendedButton>
+               <ExtendedButton onClick={closeModal} color='#222' border='none' backgroundColor='#FAFAFA'>Cancel</ExtendedButton>
+               </>
+             )
+             
+           }
 
          
         </div>

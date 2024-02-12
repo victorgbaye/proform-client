@@ -9,13 +9,23 @@ import BackButton from "../components/patterns/BackButton";
 import { TabButton, TabContainer } from "../assets/wrappers/Tabs.styles";
 import Edit from "./Edit";
 import Responses from "./Responses";
+import Modal from "../components/patterns/Modal";
+// import { Input } from "../components/elements/Input/Input";
+import Tabs from "../components/patterns/Tabs";
+import { Link } from "react-router-dom";
+import CopyLink from "../components/patterns/CopyLink";
+import Embed from "../components/patterns/Embed";
 // import FormEnviroment from "./FormEnviroment";
 
 const Form = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
 
 
-
+  const shareTabsdata = [
+    { label: 'Copy', content: <CopyLink/>},
+    { label: 'Embed', content: <Embed/>},
+  ];
   
   const tabsData = [
     { label: 'Form', content: <Edit/>},
@@ -46,16 +56,18 @@ const Form = () => {
         <ExtendedButton color="#404040" backgroundColor="#FAFAFA" border="#FAFAFA" style={{padding:'10px'}}>
             <img src={undo} alt="Preview Eye" />
           </ExtendedButton>
-          <ExtendedButton color="#404040" backgroundColor="#FAFAFA" border="#FAFAFA" style={{padding:'10px'}}>
-            <img src={redo} alt="Preview Eye" />
-          </ExtendedButton>
+            <ExtendedButton color="#404040" backgroundColor="#FAFAFA" border="#FAFAFA" style={{padding:'10px'}}>
+                <img src={redo} alt="Preview Eye" />
+            </ExtendedButton>
         <ExtendedButton color="#404040" backgroundColor="#FAFAFA" border="#FAFAFA" style={{padding:'10px'}}>
             <img src={settings} alt="Preview Eye" />
           </ExtendedButton>
-          <ExtendedButton color="#404040" backgroundColor="#FAFAFA" border="#FAFAFA" style={{padding:'10px'}}>
-            <img src={eye} alt="Preview Eye" />
-          </ExtendedButton>
-          <ExtendedButton color="#404040" backgroundColor="#FAFAFA" border="#FAFAFA">
+          <Link to='/form-view'>
+            <ExtendedButton color="#404040" backgroundColor="#FAFAFA" border="#FAFAFA" style={{padding:'10px'}}>
+              <img src={eye} alt="Preview Eye" />
+            </ExtendedButton>
+          </Link>
+          <ExtendedButton color="#404040" backgroundColor="#FAFAFA" border="#FAFAFA" onClick={()=> setIsModalOpen(!isModalOpen)}>
             <p>Share</p>
           </ExtendedButton>
           <ExtendedButton color="#EDF1FF">
@@ -67,6 +79,12 @@ const Form = () => {
 
       {tabsData[activeTab].content}
       </div>
+      {
+            isModalOpen &&
+            <Modal title="Share link" closeModal={()=>setIsModalOpen(false)} buttonLabel="Copy link" onConfirm={()=>console.log()} isCanel={true}>
+                <Tabs tabs={shareTabsdata}></Tabs>
+            </Modal>
+        }
     </div>
   );
 };

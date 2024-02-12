@@ -37,8 +37,8 @@ export const TabButton = styled.button<{ isActive: boolean }>`
 `;
 
 export const TabContent = styled.div`
-  /* margin-top: 16px; */
-        padding: 0 20px;
+        margin-top: 16px;
+        /* padding: 0 20px; */
         display: flex;
         flex: 1;
         width: 100%;

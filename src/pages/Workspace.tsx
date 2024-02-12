@@ -44,7 +44,7 @@ const Workspace = () => {
         <div className="page-header-right">
             <SearchBar/>
             <div style={{position:'relative'}}>
-                <img src={profile} onClick={toggleDropdown}/>
+                <img src={profile} onClick={toggleDropdown} style={{cursor:'hover'}}/>
                 <Dropdown isopen={isOpen} ref={dropdownRef} style={{right:'0px', width:'190px'}}>
                     <Link to='/account' style={{textDecoration:'none', color:'inherit', width:'100%'}}>
                         <span>
