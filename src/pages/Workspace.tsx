@@ -11,7 +11,7 @@ import { Link } from "react-router-dom"
 import { useState, useRef, useEffect } from "react"
 import { Dropdown } from "../assets/wrappers/Dropdown.styles"
 const Workspace = () => {
-    const [isEmpty] = useState(false)
+    const [isEmpty] = useState(true)
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null); 
     const toggleDropdown = () => {
@@ -44,7 +44,7 @@ const Workspace = () => {
         <div className="page-header-right">
             <SearchBar/>
             <div style={{position:'relative'}}>
-                <img src={profile} onClick={toggleDropdown} style={{cursor:'hover'}}/>
+                <img src={profile} onClick={toggleDropdown} style={{cursor:'pointer'}}/>
                 <Dropdown isopen={isOpen} ref={dropdownRef} style={{right:'0px', width:'190px'}}>
                     <Link to='/account' style={{textDecoration:'none', color:'inherit', width:'100%'}}>
                         <span>
@@ -71,7 +71,7 @@ const Workspace = () => {
         </div>
         {
            isEmpty ?
-           <div style={{ display:'flex', flexDirection:'column', alignItems:'center', gap:'16px',position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+           <div style={{ display:'flex', flexDirection:'column', alignItems:'center', gap:'16px',position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' ,}}>
                <img src={empty}/>
                <p style={{width:'200px', textAlign:'center'}}>Click <Link to='/form' style={{textDecoration:'none', color:'#5D55F7'}}>“New form”</Link> to start your creation journey</p>
            </div>:

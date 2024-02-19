@@ -3,7 +3,7 @@ import ellipsis from '../../assets/images/ellipsis.svg'
 import { Dropdown } from "../../assets/wrappers/Dropdown.styles"
 import { useState, useEffect, useRef } from 'react';
 import eye from '../../assets/images/eye.svg'
-import chart from '../../assets/images/chart.svg'
+// import chart from '../../assets/images/chart.svg'
 import clone from '../../assets/images/clone.svg'
 import file from '../../assets/images/file.svg'
 import share from '../../assets/images/share.svg'
@@ -61,10 +61,10 @@ const FormCard = () => {
                         <img src={share}/>
                         <p>Share</p>
                     </span>
-                    <span>
+                    {/* <span>
                         <img src={chart}/>
                         <p>Insight</p>
-                    </span>
+                    </span> */}
                     <span>
                         <img src={users}/>
                         <p>Recipients</p>

@@ -43,6 +43,16 @@ const Edit = () => {
   const handleDeleteQuestion = (id: number) => {
     setQuestions(questions.filter(question => question.id !== id));
   };
+  const handleCloneQuestion = (id: number) => {
+    const questionToClone = questions.find(question => question.id === id);
+    if (questionToClone) {
+      const newId = questions.length + 1;
+      const clonedQuestion = { id: newId, content: questionToClone.content }; // Assuming you want to clone the content as well
+      const clonedQuestions = [...questions.slice(0, id), clonedQuestion, ...questions.slice(id)];
+      setQuestions(clonedQuestions);
+    }
+  };
+  
   return (
     <div style={{ position: 'relative' }}>
 
@@ -69,7 +79,7 @@ const Edit = () => {
             onDragEnd={handleSortQuestions}
             onDragOver={(e) => e.preventDefault()}
           >
-            <FormQuestion id={id} onQuestionTypeChange={handleQuestionTypeChange} onDelete={handleDeleteQuestion}/>
+            <FormQuestion id={id} onQuestionTypeChange={handleQuestionTypeChange} onDelete={handleDeleteQuestion} onClone={handleCloneQuestion}/>
           </div>
         ))}
         {/* <FormEnviroment/> */}

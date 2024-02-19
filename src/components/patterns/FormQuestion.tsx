@@ -13,6 +13,8 @@ interface QuestionProps {
   id: number;
   onQuestionTypeChange: (id: number, type: string) => void;
   onDelete: (id: number) => void; 
+  onClone: (id: number) => void; 
+
 }
 
 const inputComponents: Record<string, React.ReactElement> = {
@@ -26,7 +28,7 @@ const inputComponents: Record<string, React.ReactElement> = {
   // Add more question types as needed
 };
 
-const FormQuestion: React.FC<QuestionProps> = ({ id, onQuestionTypeChange, onDelete }) => {
+const FormQuestion: React.FC<QuestionProps> = ({ id, onQuestionTypeChange, onDelete, onClone }) => {
   const [questionType, setQuestionType] = useState<string>('Small text area'); // Set the default value here
 
   const handleQuestionTypeChange = (value: string) => {
@@ -35,6 +37,9 @@ const FormQuestion: React.FC<QuestionProps> = ({ id, onQuestionTypeChange, onDel
   };
   const handleDeleteClick = () => {
     onDelete(id);
+  };
+  const handleCloneClick = () => {
+    onClone(id);
   };
   return (
     <div>
@@ -69,10 +74,10 @@ const FormQuestion: React.FC<QuestionProps> = ({ id, onQuestionTypeChange, onDel
                     <p>Required</p>
                 </div>
                 <div  className="items">
-                    <img src={cloneW}/>
+                    <img src={cloneW} onClick={handleCloneClick} style={{cursor:'pointer'}}/>
                 </div>
                 <div  className="items">
-                    <img src={trashW} onClick={handleDeleteClick}/>
+                    <img src={trashW} onClick={handleDeleteClick} style={{cursor:'pointer'}}/>
                 </div>
             </div>
         </QuestionFooter>
