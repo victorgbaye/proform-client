@@ -184,7 +184,8 @@ export const ToggleSlider = styled.span`
     content: "";
     height: 11px;
     width: 11px;
-    left: 2px;
+    left: 4px;
+    right: 4px;
     bottom: 5px;
     background-color: white;
     border-radius: 50%;
@@ -196,6 +197,6 @@ export const ToggleSlider = styled.span`
   }
 
   ${ToggleInput}:checked + &:before {
-    transform: translateX(20px);
+    transform: translateX(16px);
   }
 `;

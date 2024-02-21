@@ -32,6 +32,8 @@ export const Wrapper = styled.div`
         align-items: center;
         gap: 10px;
         align-self: stretch;
+        margin-bottom: 16px;
+
     }
     .question::placeholder{
         color: var(--Cod-Gray-Disabled-Text, #D4D4D4);

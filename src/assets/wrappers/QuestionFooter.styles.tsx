@@ -10,6 +10,7 @@ export const QuestionFooter = styled.section`
         margin: 0 auto;
         border-bottom-right-radius:8px;
         border-bottom-left-radius:8px;
+        align-items: center;
         .drag{
             padding: 10px;
             border-right:1px solid #262626;
@@ -22,6 +23,8 @@ export const QuestionFooter = styled.section`
             .items{
                padding: 10px;
                 border-left: 1px solid #262626;
+                display: flex;
+                align-items: center;
             }
             .required{
                 display: flex;
