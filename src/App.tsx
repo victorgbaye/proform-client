@@ -9,6 +9,7 @@ import Responses from './pages/Responses';
 import NotFound from './pages/NotFound';
 import FormView from './pages/FormView';
 import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
       <Route path="/response-view" element={<FormResponseView/>} />
       <Route path="/view" element={<FormView/>} />
       <Route path="/login" element={<Login/>} />
-
+      <Route path="/signup" element={<Signup/>} />
 
       <Route path="*" element={<NotFound/>} />
 
