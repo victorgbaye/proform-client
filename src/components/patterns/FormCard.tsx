@@ -57,7 +57,7 @@ const FormCard = () => {
                         <img src={file}/>
                         <p>Preview</p>
                     </span>
-                    <span>
+                    <span >
                         <img src={share}/>
                         <p>Share</p>
                     </span>

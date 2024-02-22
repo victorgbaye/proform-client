@@ -19,9 +19,9 @@ interface QuestionProps {
 
 const inputComponents: Record<string, React.ReactElement> = {
   'Multi-select': <MultiChoice />,
-  'Small text area': <ShortText />,
-  'Large text area': <LongText />,
-  'Link': <Link />,
+  'Small text area': <ShortText editMode={true}/>,
+  'Large text area': <LongText editMode={true}/>,
+  'Link': <Link editMode={true}/>,
   'Single choice select': <SingleChoice />,
   'Rating': <Rating />,
 

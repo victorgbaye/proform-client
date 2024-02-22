@@ -11,7 +11,7 @@ import { Link } from "react-router-dom"
 import { useState, useRef, useEffect } from "react"
 import { Dropdown } from "../assets/wrappers/Dropdown.styles"
 const Workspace = () => {
-    const [isEmpty] = useState(true)
+    const [isEmpty] = useState(false)
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null); 
     const toggleDropdown = () => {

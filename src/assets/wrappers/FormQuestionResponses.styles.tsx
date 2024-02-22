@@ -1,6 +1,8 @@
 import styled from 'styled-components'
-
-export const LinkResponse = styled.input`
+interface LinkProps {
+    editMode: boolean;
+}
+export const LinkResponse = styled.input<LinkProps>`
     display: flex;
     height: var(--XXL, 40px);
     padding: 10px var(--SM, 16px);
@@ -11,6 +13,8 @@ export const LinkResponse = styled.input`
     border: 1px solid var(--cod-gray-border-divider, #E5E5E5);
     background: var(--cod-gray-border-divider, #E5E5E5);
     width: 100%;
+    background:${props => props.editMode ? 'var(--cod-gray-border-divider, #E5E5E5)' : 'white'}; ;
+
 
     ::placeholder{
         color: var(--Cod-Gray-Disabled-Text, #D4D4D4);
@@ -25,7 +29,10 @@ export const LinkResponse = styled.input`
 `;
 
 // SHORT TEXT 
-export const ShortTextResponse = styled.input`
+interface ShortTextProps {
+    editMode: boolean;
+}
+export const ShortTextResponse = styled.input<ShortTextProps>`
     display: flex;
     height: var(--XXL, 40px);
     padding: 10px var(--SM, 16px);
@@ -35,7 +42,7 @@ export const ShortTextResponse = styled.input`
     align-self: stretch;
     border-radius: var(--XS, 8px);
     border: 1px solid var(--cod-gray-border-divider, #E5E5E5);
-    background: var(--cod-gray-border-divider, #E5E5E5);
+    background:${props => props.editMode ? 'var(--cod-gray-border-divider, #E5E5E5)' : 'white'}; ;
 
     ::placeholder{
         color: var(--Cod-Gray-Disabled-Text, #D4D4D4);
@@ -49,7 +56,11 @@ export const ShortTextResponse = styled.input`
 `;
 
 // LONG TEXT
-export const LongTextResponse = styled.textarea`
+interface LongTextProps {
+    editMode: boolean;
+}
+
+export const LongTextResponse = styled.textarea<LongTextProps>`
     display: flex;
     height: 140px;
     padding: 10px var(--SM, 16px);
@@ -59,7 +70,7 @@ export const LongTextResponse = styled.textarea`
     align-self: stretch;
     border-radius: var(--XS, 8px);
     border: 1px solid var(--cod-gray-border-divider, #E5E5E5);
-    background: var(--cod-gray-border-divider, #E5E5E5);
+    background:${props => props.editMode ? 'var(--cod-gray-border-divider, #E5E5E5)' : 'white'}; ;
     resize: none;
 
     ::placeholder{

@@ -1,25 +1,34 @@
-import { useState } from "react"
+import { FC, useState } from "react"
 import { LinkResponse, LongTextResponse, MultiChoiceResponse, RatingResponse, ShortTextResponse } from "../../assets/wrappers/FormQuestionResponses.styles"
 import { Checkbox, Radio } from "../elements/Input/Input"
 import starFill from '../../assets/images/starFill.svg'
 import starOutline from '../../assets/images/starOutline.svg'
 
-
-export const Link = () =>{
+interface LinkProps {
+  editMode: boolean; // Explicitly typing the editMode prop as boolean
+}
+export const Link: FC<LinkProps> = ({editMode}) =>{
     return(
-        <LinkResponse placeholder="User will paste link here" readOnly></LinkResponse>
+        <LinkResponse placeholder="https://www.example.com" readOnly={editMode} editMode={editMode}></LinkResponse>
     )
 }
 
-export const LongText = () =>{
+interface LongTextProps {
+  editMode: boolean; // Explicitly typing the editMode prop as boolean
+}
+
+export const LongText: FC<LongTextProps> = ({editMode}) =>{
     return(
-        <LongTextResponse placeholder="User will type answer here" readOnly></LongTextResponse>
+        <LongTextResponse placeholder="User will type answer here" readOnly={editMode} editMode={editMode}></LongTextResponse>
     )
 }
 
-export const ShortText = () =>{
+interface ShortTextProps {
+  editMode: boolean; // Explicitly typing the editMode prop as boolean
+}
+export const ShortText: FC<ShortTextProps> = ({editMode}) =>{
     return(
-        <ShortTextResponse placeholder="User will type answer here" readOnly></ShortTextResponse>
+        <ShortTextResponse placeholder="User will type answer here" editMode={editMode} readOnly={editMode}></ShortTextResponse>
     )
 }
 

@@ -2,6 +2,7 @@ import { FormViewWrapper } from "../assets/wrappers/FormView.styles";
 import { PageHeader } from "../assets/wrappers/PageHeader.styles";
 import { Button } from "../components/elements/Button/Button.styles";
 import { ResponseCheckbox, ResponseRadio } from "../components/elements/Input/Input";
+import { Link, LongText, ShortText } from "../components/patterns/FormQuestionResponses";
 // import BackButton from "../components/patterns/BackButton";
 import { dummyFormData } from '../utils/ResponseData';
 
@@ -35,7 +36,23 @@ const FormView = () => {
                     data.options.map((option) => (
                       <ResponseCheckbox key={option.id} value={option.text} checked={data.selectedOptions?.some(selectedOption => selectedOption.id === option.id)} />
                     ))
-                  ) : (
+                  ) : data.responseType === 'Large text area' ? (
+                    // Render checkboxes if response type is multi-select and options are defined
+                   <>
+                   <LongText editMode={false}/>
+                   </>
+                  ):  data.responseType === 'Small text area' ? (
+                    // Render checkboxes if response type is multi-select and options are defined
+                   <>
+                   <ShortText editMode={false}/>
+                   </>
+                  ):data.responseType === 'Link' ? (
+                    // Render checkboxes if response type is multi-select and options are defined
+                   <>
+                   <Link editMode={false}/>
+                   </>
+                  ):
+                  (
                     // Render response directly if response type is not single choice select or multi-select, or options are undefined
                     <div>{data.response}</div>
                   )}
