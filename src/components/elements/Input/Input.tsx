@@ -39,16 +39,17 @@ export const CustomSelect: React.FC<CustomSelectProps> = (
 }
 
 type Checkbpxprop = {
-    checked: boolean;
-    onChange: () => void;
-    placeholder:string
+    checked?: boolean;
+    onChange?: () => void;
+    placeholder?:string
+    value?:string
  }
 
 
  
 
  type ResponseCheckbpxprop = {
-  checked: boolean | undefined;
+  checked?: boolean | undefined;
   value:string
 }
 export const Checkbox = (props: Checkbpxprop) => {
@@ -74,10 +75,10 @@ export const Checkbox = (props: Checkbpxprop) => {
     return (
         <CheckboxWrapper>
         <CustomRadioButton type='checkbox'  checked={props.checked} onChange={props.onChange}/>
-        <CheckboxInput placeholder={props.placeholder}></CheckboxInput>
+        <CheckboxInput placeholder={props.placeholder} value={props.value}></CheckboxInput>
       </CheckboxWrapper>
     );
-  };
+  }
 
   export const  ResponseRadio = (props: ResponseCheckbpxprop) => {
     return (
@@ -87,6 +88,15 @@ export const Checkbox = (props: Checkbpxprop) => {
       </CheckboxWrapper>
     );
   };
+  export const  ViewRadio = (props: ResponseCheckbpxprop) => {
+    return (
+        <CheckboxWrapper>
+        <CustomRadioButton type='checkbox'  checked={props.checked}/>
+        <ResponseCheckboxInput value={props.value}></ResponseCheckboxInput>
+      </CheckboxWrapper>
+    );
+  };
+
   export const CustomToggle = () => {
     return (
         <CustomToggleWrapper>
