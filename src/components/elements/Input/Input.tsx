@@ -3,7 +3,8 @@ import { CheckboxInput, CheckboxWrapper, CustomCheckbox, CustomRadioButton, Cust
 type InputProps = {
     label: string,
     placeholder:string
-    readOnly?: boolean
+    readOnly?: boolean,
+    type?:string
 }
 export const Input = (props: InputProps) => {
     return (
@@ -12,6 +13,7 @@ export const Input = (props: InputProps) => {
         <DefaultInput
         placeholder={props.placeholder}
         readOnly={props.readOnly}
+        type={props.type}
         />
     </div>
   )

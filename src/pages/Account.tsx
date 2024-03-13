@@ -97,8 +97,8 @@ const Account = () => {
             isModalOpen &&
             <Modal title="Change password" closeModal={()=>setIsModalOpen(false)} buttonLabel="Save" onConfirm={handleChangePassword} >
                 <div className="new-password-modal-content">
-                    <Input label="current password" placeholder="Enter password"/>
-                    <Input label="new password" placeholder="Enter new password"/>
+                    <Input label="current password" placeholder="Enter password" type="password"/>
+                    <Input label="new password" placeholder="Enter new password" type="password"/>
                 </div>
             </Modal>
         }
