@@ -82,13 +82,13 @@ const Account = () => {
                     <ExtendedButton backgroundColor="#EDF1FF" color="#5D55F7" border="none">Change avatar</ExtendedButton>
                 </div>
                 <div className="input-container">
-                    <Input label="Full name" placeholder="Johnson Doe"/>
+                    <Input label="Full name" placeholder="e.g Johnson Doe"/>
                 </div>
                 <div className="input-container">
-                    <Input label="Email" placeholder="Johnsondoe@gmail.com"/>
+                    <Input label="Email" placeholder="e.g Johnsondoe@gmail.com"/>
                 </div>
                 <div className="change-password">
-                    <Input label="Password" placeholder="********"/>
+                    <Input label="Password" placeholder="********" readOnly/>
                     <ExtendedButton backgroundColor="#EDF1FF" color="#5D55F7" border="none" onClick={handleChangePassword}>Change password</ExtendedButton>
                 </div>
             </main>

@@ -1,5 +1,5 @@
 import { ExtendedButton } from "../components/elements/Button/Button.styles";
-import shareW from '../assets/images/shareW.svg';
+import add from '../assets/images/add.svg';
 import FormQuestion from "../components/patterns/FormQuestion";
 import { useState, useRef } from "react";
 // import FormEnviroment from "./FormEnviroment";
@@ -9,6 +9,10 @@ const Edit = () => {
     { id: 1, content: 'default' },
     // Add more questions as needed
   ]);
+  const [formHeader, setFormHeader]= useState({
+    title:'Form Title',
+    description:'A brief description for the form'
+  })
 
   const dragQuestion = useRef<number | null>(null);
   const draggedOverQuestion = useRef<number | null>(null);
@@ -59,8 +63,9 @@ const Edit = () => {
       <header
       className="form-header"
       >
-        <input value='Form Title' className="form-title"/>
-        <input value='A brief description for the form' className="form-description"/>
+        <input value={formHeader.title} className="form-title" onChange={(e) => setFormHeader({ ...formHeader, title: e.target.value })}/>
+        <input value={formHeader.description} className="form-description"   onChange={(e) => setFormHeader({ ...formHeader, description: e.target.value })}
+/>
       </header>
       <section
         style={{
@@ -85,12 +90,11 @@ const Edit = () => {
         {/* <FormEnviroment/> */}
       </section>
       <ExtendedButton
-        style={{ position: 'absolute', bottom: 20, right: 20 }}
+        style={{ position: 'absolute', bottom: 20, right: 20, background:"#EDF1FF" }}
         color="#EDF1FF"
         onClick={handleAddQuestion}
       >
-        <img src={shareW} alt="Add Question Icon" />
-        <p>Add Question</p>
+        <img src={add} alt="Add Question Icon" />
       </ExtendedButton>
     </div>
   );
